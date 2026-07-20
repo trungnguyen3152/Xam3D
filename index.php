@@ -68,6 +68,53 @@
     <!-- Login Button (Bottom Left) -->
     <a href="#" class="login-box">Đăng nhập</a>
     
+    <!-- Login Popup Modal -->
+    <div class="login-overlay" id="loginPopup">
+        <div class="login-modal">
+            <span class="close-btn" id="closeLogin">&times;</span>
+            <h2 id="modalTitle">Đăng nhập</h2>
+            <form action="#" method="POST">
+                <div class="input-group" id="groupUsername">
+                    <label for="username">Tên đăng nhập</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group register-field" id="groupEmail">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="input-group" id="groupPassword">
+                    <label for="password">Mật khẩu</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" required>
+                        <span class="toggle-password" data-target="password">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="input-group register-field" id="groupConfirmPassword">
+                    <label for="confirm_password">Xác nhận mật khẩu</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="confirm_password" name="confirm_password">
+                        <span class="toggle-password" data-target="confirm_password">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </span>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit" id="mainSubmitBtn">Đăng nhập</button>
+                
+                <div class="forgot-password-link" id="forgotPasswordLink">
+                    <a href="#" id="forgotPasswordBtn">Quên mật khẩu?</a>
+                </div>
+                
+                <div class="divider" id="divider">
+                    <span>Hoặc</span>
+                </div>
+                
+                <button type="button" class="btn-register" id="toggleModeBtn">Đăng ký</button>
+            </form>
+        </div>
+    </div>
+    
     <script type="module" src="app.js"></script>
 </body>
 </html>

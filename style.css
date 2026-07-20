@@ -100,6 +100,10 @@ body::before {
     text-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
+.top-nav a.mobile-login-btn {
+    display: none;
+}
+
 .top-nav a:active {
     transform: translateY(-1px);
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -278,6 +282,200 @@ body::before {
 
 .mobile-login-btn {
     display: none;
+}
+
+/* Login Popup */
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    backdrop-filter: blur(4px);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.login-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.login-modal {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.login-overlay.show .login-modal {
+    transform: translateY(0);
+}
+
+.login-modal h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #111;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #111;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.input-group.register-field {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.input-group.register-field.show {
+    max-height: 100px;
+    opacity: 1;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #4b4b4d;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    color: #4b4b4d;
+}
+
+.toggle-password:hover {
+    opacity: 1;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #4b4b4d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #333;
+}
+
+.forgot-password-link {
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.forgot-password-link a {
+    color: #4b4b4d;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgot-password-link a:hover {
+    color: #111;
+    text-decoration: underline;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.divider span {
+    padding: 0 10px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 15px;
+    background-color: transparent;
+    color: #4b4b4d;
+    border: 1px solid #4b4b4d;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-register:hover {
+    background-color: #f6f6f4;
 }
 
 /* Mobile Responsive */
