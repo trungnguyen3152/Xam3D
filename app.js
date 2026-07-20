@@ -64,6 +64,9 @@ if(toggleModeBtn) {
     
     const setMode = (mode) => {
         currentMode = mode;
+        const authAction = document.getElementById('authAction');
+        if (authAction) authAction.value = mode;
+        
         if (mode === 'login') {
             modalTitle.textContent = "Đăng nhập";
             mainSubmitBtn.textContent = "Đăng nhập";
@@ -151,5 +154,61 @@ togglePasswordBtns.forEach(btn => {
             input.type = 'password';
             btn.style.opacity = '0.5';
         }
+    });
+});
+
+// Auth Form Submission
+const authForm = document.getElementById('authForm');
+const authMessage = document.getElementById('authMessage');
+
+if (authForm) {
+    authForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(authForm);
+        
+        fetch('auth.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            authMessage.style.display = 'block';
+            authMessage.textContent = data.message;
+            if (data.status === 'success') {
+                authMessage.style.backgroundColor = '#d4edda';
+                authMessage.style.color = '#155724';
+                setTimeout(() => {
+                    window.location.reload();
+                }, 1000);
+            } else {
+                authMessage.style.backgroundColor = '#f8d7da';
+                authMessage.style.color = '#721c24';
+            }
+        })
+        .catch(err => {
+            console.error('Error:', err);
+        });
+    });
+}
+
+// Logout Buttons
+const logoutBtns = document.querySelectorAll('#mobileLogoutBtn, #desktopLogoutBtn');
+logoutBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('action', 'logout');
+        
+        fetch('auth.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                window.location.reload();
+            }
+        });
     });
 });

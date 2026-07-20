@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -22,7 +23,11 @@
             <a href="#">Sản Phẩm</a>
             <a href="#">Thư viện</a>
             <a href="#">Liên hệ</a>
-            <a href="#" class="mobile-login-btn">Đăng nhập</a>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <a href="#" class="mobile-login-btn" id="mobileLogoutBtn">Đăng xuất</a>
+            <?php else: ?>
+                <a href="#" class="mobile-login-btn">Đăng nhập</a>
+            <?php endif; ?>
         </nav>
     </header>
 
@@ -65,15 +70,21 @@
             </div>
         </section>
     </div>
-    <!-- Login Button (Bottom Left) -->
-    <a href="#" class="login-box">Đăng nhập</a>
+    <!-- Login Button (Bottom Right) -->
+    <?php if (isset($_SESSION['user_id'])): ?>
+        <a href="#" class="login-box" id="desktopLogoutBtn">Chào, <?php echo htmlspecialchars($_SESSION['username']); ?> (Đăng xuất)</a>
+    <?php else: ?>
+        <a href="#" class="login-box">Đăng nhập</a>
+    <?php endif; ?>
     
     <!-- Login Popup Modal -->
     <div class="login-overlay" id="loginPopup">
         <div class="login-modal">
             <span class="close-btn" id="closeLogin">&times;</span>
             <h2 id="modalTitle">Đăng nhập</h2>
-            <form action="#" method="POST">
+            <div id="authMessage" style="display: none; padding: 10px; margin-bottom: 15px; border-radius: 4px; font-size: 0.9rem; text-align: center;"></div>
+            <form id="authForm" action="#" method="POST">
+                <input type="hidden" id="authAction" name="action" value="login">
                 <div class="input-group" id="groupUsername">
                     <label for="username">Tên đăng nhập</label>
                     <input type="text" id="username" name="username" required>
