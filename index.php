@@ -41,9 +41,8 @@
                     <a href="#" class="btn-primary">Khám phá ngay</a>
                 </div>
                 <div class="hero-visual">
-                    <div id="viewer-container">
-                        <!-- 3D Viewer Canvas will be injected here -->
-                        <div class="placeholder-text"></div>
+                    <div id="viewer-container" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
+                        <img src="Image/cs.png" alt="Coming Soon" class="hero-image">
                     </div>
                 </div>
             </section>
