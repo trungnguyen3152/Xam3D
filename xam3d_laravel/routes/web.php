@@ -5,8 +5,8 @@ use App\Http\Controllers\AuthController;
 
 use App\Http\Controllers\AdminController;
 
-Route::get('/', function () { return view('welcome'); });
-Route::get('/home', function () { return view('welcome'); });
+Route::get('/', function () { return view('coming-soon'); });
+Route::get('/home', function () { return view('coming-soon'); });
 
 Route::get('/admin', [AdminController::class, 'dashboard']);
 Route::get('/admin/users', [AdminController::class, 'users']);

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Xám 3D</title>
+    <link rel="icon" href="{{ asset('Image/icon3.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
+    <style>
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .coming-soon-logo {
+            height: 140px;
+            margin-bottom: 25px;
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .coming-soon-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .text-code {
+            font-size: 5rem;
+            color: #111;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+        }
+
+        .text-message {
+            font-size: 2rem;
+            color: #4b4b4d;
+            margin-bottom: 20px;
+        }
+
+        .text-description {
+            font-size: 1.4rem;
+            color: #000000;
+            margin-bottom: 40px;
+            max-width: 650px;
+            font-weight: normal;
+        }
+
+        .btn-home {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #4b4b4d;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-home:hover {
+            background-color: #333;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-home:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container" style="justify-content: center; min-height: 100vh;">
+        <div class="text-container">
+            <img src="{{ asset('Image/logo2.png') }}" alt="Xám 3D Logo" class="coming-soon-logo">
+            <h1 class="text-code">Coming Soon</h1>
+            <h2 class="text-message">Xám 3D - 3D IoT & Decor</h2>
+            <p class="text-description">Tính năng này đang trong quá trình phát triển và sẽ sớm được ra mắt. Cảm ơn bạn đã quan tâm, mời bạn quay lại sau nhé!</p>
+           
+        </div>
+    </div>
+</body>
+</html>

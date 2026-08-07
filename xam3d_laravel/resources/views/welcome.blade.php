@@ -76,7 +76,7 @@
                 <div class="footer-brand">
                     <div class="footer-logo">
                         <img src="{{ asset('Image/logo2.png') }}" alt="Xám 3D Logo" style="height: 30px; margin-right: 10px; border-radius: 6px;">
-                        <span>Xám 3D</span>
+                        <span>3D IoT & Decor</span>
                     </div>
                     <p>Xám 3D empowers teams to transform raw data into clear, compelling visuals — making insights easier to share, understand, and act on.</p>
                     <div class="social-icons">

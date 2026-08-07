@@ -5,4 +5,3 @@ RewriteCond %{HTTP_HOST} ^www.giayphut.vn$
 RewriteCond %{REQUEST_URI} !^/xam3d_laravel/public/
 RewriteRule ^(.*)$ /xam3d_laravel/public/$1 [L]
 </IfModule>
-//hehehehe
