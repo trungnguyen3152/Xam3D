@@ -23,8 +23,11 @@
             height: 140px;
             margin-bottom: 25px;
             border-radius: 16px;
+            background-color: #f6f6f4; /* Blocks transparent background */
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            z-index: 99;
         }
         
         .coming-soon-logo:hover {
@@ -75,12 +78,20 @@
             transform: translateY(-1px);
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
+
+        html, body {
+            overflow: hidden !important;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            touch-action: none;
+        }
     </style>
 </head>
 <body>
-    <div class="app-container" style="justify-content: center; min-height: 100vh;">
+    <div class="app-container" style="justify-content: center; height: 100vh; overflow: hidden;">
         <div class="text-container">
-            <img src="{{ asset('Image/logo2.png') }}" alt="Xám 3D Logo" class="coming-soon-logo">
+            <img src="{{ asset('Image/logo4.png') }}" alt="Xám 3D Logo" class="coming-soon-logo">
             <h1 class="text-code">Coming Soon</h1>
             <h2 class="text-message">Xám 3D - 3D IoT & Decor</h2>
             <p class="text-description">Tính năng này đang trong quá trình phát triển và sẽ sớm được ra mắt. Cảm ơn bạn đã quan tâm, mời bạn quay lại sau nhé!</p>

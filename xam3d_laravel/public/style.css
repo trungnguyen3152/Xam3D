@@ -38,6 +38,7 @@ body::after {
     background-size: 60px 60px;
     background-position: center;
     opacity: 0;
+    z-index: -1;
 }
 
 html::before {

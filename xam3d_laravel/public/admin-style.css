@@ -1,17 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
+@font-face {
+    font-family: 'SVN-Trench';
+    src: url('fonts/SVN-Trench.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
-    --primary-color: #5d87ff;
-    --primary-light: #ecf2ff;
-    --secondary-color: #49beff;
-    --secondary-light: #e8f7ff;
+    --primary-color: #4b4b4d;
+    --primary-light: #eaeaec;
+    --secondary-color: #333333;
+    --secondary-light: #f6f6f4;
     --success-color: #13deb9;
     --success-light: #e6fffa;
     --error-color: #fa896b;
     --error-light: #fdede8;
-    --text-color: #2a3547;
-    --text-muted: #7c8fac;
-    --bg-color: #f8f9fa;
+    --text-color: #111111;
+    --text-muted: #888888;
+    --bg-color: #f6f6f4;
     --card-bg: #ffffff;
     --border-color: #e5eaef;
     --sidebar-width: 270px;
@@ -23,7 +30,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'SVN-Trench', 'Plus Jakarta Sans', sans-serif;
 }
 
 body {
