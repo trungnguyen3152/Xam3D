@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon | Xám 3D</title>
     <link rel="icon" href="{{ asset('Image/icon3.png') }}" type="image/png">
-    <link rel="preload" as="image" href="{{ asset('Image/logo4.png') }}">
+    <link rel="preload" as="image" href="{{ asset('Image/logo9.png') }}">
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     <style>
         .text-container {
@@ -92,7 +92,7 @@
 <body>
     <div class="app-container" style="justify-content: center; height: 100vh; overflow: hidden;">
         <div class="text-container">
-            <img src="{{ asset('Image/logo9.png') }}" alt="Xám 3D Logo" class="coming-soon-logo" fetchpriority="high" decoding="sync">
+            <img src="{{ asset('Image/logo11.png') }}" alt="Xám 3D Logo" class="coming-soon-logo" fetchpriority="high" decoding="sync">
             <h1 class="text-code">Coming Soon</h1>
             <h2 class="text-message">Xám 3D - 3D IoT & More</h2>
             <p class="text-description">Tính năng này đang trong quá trình phát triển và sẽ sớm được ra mắt. Cảm ơn bạn đã quan tâm, mời bạn quay lại sau nhé!</p>

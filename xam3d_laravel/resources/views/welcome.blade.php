@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xám 3D</title>
     <link rel="icon" href="{{ asset('Image/icon3.png') }}" type="image/png">
+    <link rel="preload" as="image" href="{{ asset('Image/logo11.png') }}">
     <link rel="stylesheet" href="{{ asset('style.css') }}">
 </head>
 <body>
     <header class="site-header">
         <div class="top-logo">
-            <img src="{{ asset('Image/logo2.png') }}" alt="Logo">
+            <img src="{{ asset('Image/logo11.png') }}" alt="Logo">
         </div>
         <div class="menu-toggle">
             <span></span>
